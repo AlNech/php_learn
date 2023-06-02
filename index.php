@@ -1,19 +1,27 @@
-<meta charset="utf-8">
-
 <?php
-$host = 'localhost'; // имя хоста
-$user = 'root';      // имя пользователя
-$pass = 'root';          // пароль
-$name = 'test';      // имя базы данных
+require 'vendor/query.php';
 
-$link = mysqli_connect($host, $user, $pass, $name);
-mysqli_query($link, "SET NAMES 'utf8'");
-
-$query = 'SELECT * FROM users';
-$res = mysqli_query($link, $query) or die(mysqli_error($link));
-var_dump($res);
-
-
-$row = mysqli_fetch_assoc($res);
-var_dump($row);
+/** @var \vendor\query $row */
 ?>
+
+
+<!doctype html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h3>Request record from table users</h3>
+        </div>
+        <div class="content">
+            <?php var_dump($row);?>
+        </div>
+    </div>
+</body>
+</html>
