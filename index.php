@@ -2,6 +2,7 @@
 require 'vendor/query.php';
 
 /** @var \vendor\query $row */
+/** @var \vendor\query $data */
 ?>
 
 
@@ -21,7 +22,11 @@ require 'vendor/query.php';
         </div>
         <div class="content">
             all records
-            <?php var_dump($data);?>
+            <?php
+                echo $data[0]["name"] . "<br/>";
+                echo $data[1]["name"] . " is " . $data[1]["age"] . " years old <br/>";
+                echo $data[2]["name"] . " is " . $data[2]["age"] . " years old and he has" . $data[2]["salary"] . " salary<br/>";
+            ?>
         </div>
     </div>
 </body>
