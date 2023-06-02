@@ -20,7 +20,8 @@ require 'vendor/query.php';
             <h3>Request record from table users</h3>
         </div>
         <div class="content">
-            <?php var_dump($row);?>
+            all records
+            <?php var_dump($data);?>
         </div>
     </div>
 </body>
